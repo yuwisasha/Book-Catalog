@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    command: bash -c "python catalog_app/manage.py migrate && python catalog_app/manage.py runserver 0.0.0.0:8000"
+    restart: always
+    env_file:
+      - .env.example
+    ports:
+      - 8000:8000
+    depends_on:
+      - mariadb
+
+  
+  mariadb:
+    image: mariadb
+    restart: always
+    env_file:
+      - .env.example
+    volumes:
+      - maria-data:/var/lib/mariadb/data
+    ports:
+      - 3306:3306
+  
+
+volumes:
+  maria-data:

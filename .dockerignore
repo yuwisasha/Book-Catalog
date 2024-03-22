@@ -1,0 +1,4 @@
+*.pyc
+.gitignore
+.git
+.pytest_cache
