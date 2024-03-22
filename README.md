@@ -35,4 +35,4 @@ make parse url=https://gitlab.grokhotov.ru/hr/python-test-vacancy/-/raw/master/b
 make superuser
 ```
 
-API docs are available at **[Swagger UI](0.0.0.0:8000/swagger)** or **[ReDoc](0.0.0.0:8000/redoc)**
+API docs are available at **[Swagger UI](http://0.0.0.0:8000/swagger)** or **[ReDoc](http://0.0.0.0:8000/redoc)**
